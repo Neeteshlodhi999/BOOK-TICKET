@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="api.css" />
 </head>
 <body>
   <div class="app-shell">
@@ -53,7 +54,7 @@
           <div class="table-wrap"><table><thead><tr><th class="check"><input type="checkbox" aria-label="Select all" /></th><th>SUBJECT</th><th>REQUESTER</th><th>STATUS</th><th>PRIORITY</th><th>ASSIGNEE</th><th>UPDATED</th><th></th></tr></thead><tbody id="ticket-rows"></tbody></table></div>
           <div class="table-bottom"><span id="result-count">Showing 5 of 12 tickets</span><div class="pager"><button disabled>← Previous</button><button class="page-active">1</button><button>2</button><button>3</button><button>Next →</button></div></div>
         </section>
-        <footer class="footer"><span>Book Ticket</span><span>Need a hand? <a href="#">Visit help center</a></span></footer>
+        <footer class="footer"><span>Book Ticket <span class="connection-state" id="connection-state"><i></i>Local demo</span></span><span>Need a hand? <a href="#">Visit help center</a></span></footer>
       </div>
     </main>
   </div>

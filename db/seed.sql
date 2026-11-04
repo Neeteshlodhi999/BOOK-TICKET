@@ -1,0 +1,14 @@
+INSERT INTO tickets (ticket_key, subject, requester, requester_initials, requester_color, description, status, priority, assignee, category, icon, icon_color, updated_at) VALUES
+('RL-2048','Unable to reset my password','Olivia Rhye','OR','peach','I tried the password reset link, but it expired before I could finish. Could you send a new one?','Open','Urgent','Jordan Lee','account','⌑','violet-bg',now() - interval '2 minutes'),
+('RL-2047','Question about my latest invoice','Phoenix Baker','PB','lilac','I need help understanding the additional charge on my latest invoice.','Open','High','Alex Morgan','billing','＄','orange-bg',now() - interval '18 minutes'),
+('RL-2046','App crashes when uploading files','Lana Steiner','LS','blue','The app closes whenever I upload a large file. It happens on every attempt.','Pending','High','Sam Kim','bug','⌘','blue-bg',now() - interval '1 hour'),
+('RL-2045','Can I change my subscription plan?','Demi Wilkinson','DW','mint','I would like to move to the annual plan. Please let me know how to do that.','Open','Normal','Jordan Lee','billing','↗','green-bg',now() - interval '2 hours'),
+('RL-2044','Feature request: dark mode','Candice Wu','CW','peach','A dark theme would make the dashboard easier to use in the evening.','Pending','Low','Alex Morgan','feature','☾','violet-bg',now() - interval '3 hours'),
+('RL-2043','Export report is missing columns','Natali Craig','NC','lilac','The CSV export is missing the owner and created date columns.','Closed','Normal','Sam Kim','bug','▤','blue-bg',now() - interval '1 day'),
+('RL-2042','Two-factor code not arriving','Drew Cano','DC','blue','I cannot sign in because the two-factor verification code never arrives.','Open','Urgent','Jordan Lee','account','⌑','orange-bg',now() - interval '1 day'),
+('RL-2041','Update the email on my account','Andi Lane','AL','mint','Please change the email address associated with my account.','Pending','Low','Alex Morgan','account','✉','green-bg',now() - interval '1 day'),
+('RL-2040','Payment was charged twice','Kate Morrison','KM','peach','I see two identical charges for this month on my card statement.','Open','High','Sam Kim','billing','＄','orange-bg',now() - interval '2 days'),
+('RL-2039','Invite link has expired','Abraham W','AW','lilac','The invitation link for my teammate says it has expired.','Open','Normal','Jordan Lee','account','＋','violet-bg',now() - interval '2 days'),
+('RL-2038','Dashboard takes a long time to load','Eleanor Pena','EP','blue','The dashboard takes more than a minute to load most mornings.','Open','Normal','Sam Kim','bug','⌘','blue-bg',now() - interval '3 days'),
+('RL-2037','Requesting a copy of my data','Robert Fox','RF','mint','Please provide a downloadable copy of the information in my account.','Open','Low','Alex Morgan','account','⇩','green-bg',now() - interval '3 days')
+ON CONFLICT (ticket_key) DO NOTHING;

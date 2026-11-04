@@ -1,0 +1,19 @@
+{
+  "name": "book-ticket",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Customer support ticket workspace with an Express API and PostgreSQL",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node --watch server/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.3.0",
+    "pg": "^8.23.1"
+  }
+}

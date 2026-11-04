@@ -1,0 +1,1 @@
+.connection-state{display:inline-flex;align-items:center;gap:5px;margin-left:10px;color:#a0a2b0;font-size:9px}.connection-state i{width:6px;height:6px;border-radius:50%;background:#e2a44e}.connection-state.connected{color:#518a70}.connection-state.connected i{background:#38aa7c}
