@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f6f7fb" />
+  <title>Book Ticket — Support workspace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#top"><span class="brand-mark">b</span><span>book ticket</span></a>
+      <div class="workspace"><span class="workspace-mark">N</span><span><strong>Northstar Studio</strong><small>Support workspace</small></span><span class="muted push">⌄</span></div>
+      <p class="nav-label">WORKSPACE</p>
+      <nav class="side-nav" aria-label="Workspace">
+        <a class="side-link active" href="#top"><span>▦</span> Overview</a>
+        <a class="side-link" href="#tickets" data-filter="all"><span>▤</span> All tickets <b id="nav-count">12</b></a>
+        <a class="side-link" href="#tickets" data-filter="open"><span>◷</span> Open</a>
+        <a class="side-link" href="#tickets" data-filter="mine"><span>♙</span> Assigned to me</a>
+      </nav>
+      <p class="nav-label views-label">YOUR VIEWS</p>
+      <nav class="side-nav" aria-label="Ticket views">
+        <a class="side-link" href="#tickets" data-filter="urgent"><i class="dot red"></i> Urgent</a>
+        <a class="side-link" href="#tickets" data-filter="billing"><i class="dot purple"></i> Billing</a>
+        <a class="side-link" href="#tickets" data-filter="bug"><i class="dot blue"></i> Bug reports</a>
+      </nav>
+      <section class="team"><p class="nav-label">TEAM</p>
+        <div class="team-person"><span class="avatar mint">JL</span> Jordan Lee <i class="online"></i></div>
+        <div class="team-person"><span class="avatar peach">AM</span> Alex Morgan</div>
+        <div class="team-person"><span class="avatar lilac">SK</span> Sam Kim</div>
+        <button class="invite">＋ &nbsp;Invite teammate</button>
+      </section>
+      <div class="profile"><span class="avatar blue">JD</span><span><strong>Jamie Davis</strong><small>Admin</small></span><span class="push muted">···</span></div>
+    </aside>
+
+    <main class="main" id="top">
+      <header class="topbar"><div class="crumb">Workspace <span>/</span> <strong>Overview</strong></div><div class="top-right"><button class="help" aria-label="Help">?</button><button class="bell" aria-label="Notifications">♧<i></i></button><span class="avatar blue">JD</span></div></header>
+      <div class="content">
+        <section class="welcome"><div><p class="eyebrow" id="today-label">YOUR SUPPORT WORKSPACE</p><h1>Good morning, Jamie <span class="sun">✳</span></h1><p class="subtle">Here’s what’s happening with your support team today.</p></div><button class="button primary" id="new-ticket"><span>＋</span> New ticket</button></section>
+        <section class="metrics" aria-label="Support metrics">
+          <article class="metric"><div class="metric-heading">Open tickets <span class="metric-icon violet-icon">▤</span></div><strong class="metric-number" id="open-metric">24</strong><p class="metric-caption"><b>↗ 12%</b> vs. last week</p><div class="spark purple-spark"><i style="--h:36%"></i><i style="--h:52%"></i><i style="--h:43%"></i><i style="--h:68%"></i><i style="--h:56%"></i><i style="--h:100%"></i></div></article>
+          <article class="metric"><div class="metric-heading">Waiting on us <span class="metric-icon orange-icon">◷</span></div><strong class="metric-number">8</strong><p class="metric-caption"><b>↘ 4%</b> vs. last week</p><div class="spark orange-spark"><i style="--h:100%"></i><i style="--h:75%"></i><i style="--h:82%"></i><i style="--h:61%"></i><i style="--h:53%"></i><i style="--h:38%"></i></div></article>
+          <article class="metric"><div class="metric-heading">Avg. first response <span class="metric-icon green-icon">◷</span></div><strong class="metric-number">2.4 <small>hrs</small></strong><p class="metric-caption"><b>↘ 18%</b> vs. last week</p><div class="spark green-spark"><i style="--h:100%"></i><i style="--h:85%"></i><i style="--h:73%"></i><i style="--h:65%"></i><i style="--h:48%"></i><i style="--h:31%"></i></div></article>
+          <article class="metric"><div class="metric-heading">CSAT score <span class="metric-icon blue-icon">☆</span></div><strong class="metric-number">96.8<small>%</small></strong><p class="metric-caption"><b>↗ 2.1%</b> vs. last week</p><div class="spark blue-spark"><i style="--h:43%"></i><i style="--h:55%"></i><i style="--h:62%"></i><i style="--h:74%"></i><i style="--h:68%"></i><i style="--h:100%"></i></div></article>
+        </section>
+        <section class="ticket-panel" id="tickets">
+          <div class="panel-head"><div><h2>Recent tickets</h2><p class="subtle">A quick look at what needs your attention.</p></div><button class="link-button" id="clear-filters">View all tickets <span>→</span></button></div>
+          <div class="toolbar"><div class="tabs" role="tablist"><button class="tab selected" data-tab="all">All <span id="count-all">12</span></button><button class="tab" data-tab="open">Open <span id="count-open">8</span></button><button class="tab" data-tab="pending">Pending <span id="count-pending">3</span></button><button class="tab" data-tab="closed">Closed <span id="count-closed">1</span></button></div><div class="tools"><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search tickets" /></label><button class="filter-chip" id="filter-help">☷ &nbsp;Filter</button></div></div>
+          <div class="table-wrap"><table><thead><tr><th class="check"><input type="checkbox" aria-label="Select all" /></th><th>SUBJECT</th><th>REQUESTER</th><th>STATUS</th><th>PRIORITY</th><th>ASSIGNEE</th><th>UPDATED</th><th></th></tr></thead><tbody id="ticket-rows"></tbody></table></div>
+          <div class="table-bottom"><span id="result-count">Showing 5 of 12 tickets</span><div class="pager"><button disabled>← Previous</button><button class="page-active">1</button><button>2</button><button>3</button><button>Next →</button></div></div>
+        </section>
+        <footer class="footer"><span>Book Ticket</span><span>Need a hand? <a href="#">Visit help center</a></span></footer>
+      </div>
+    </main>
+  </div>
+
+  <dialog id="create-dialog"><form id="create-form" class="dialog-card"><header class="dialog-heading"><div><p class="eyebrow">NEW CONVERSATION</p><h2>Create a ticket</h2></div><button type="button" class="close" data-close="create-dialog" aria-label="Close">×</button></header><label>Subject<input name="subject" required placeholder="What does the customer need help with?" /></label><div class="form-grid"><label>Requester<input name="requester" required placeholder="Name or email" /></label><label>Priority<select name="priority"><option>Normal</option><option>Urgent</option><option>High</option><option>Low</option></select></label></div><label>Description<textarea name="description" rows="4" placeholder="Add context for your team..."></textarea></label><div class="dialog-actions"><button type="button" class="button secondary" data-close="create-dialog">Cancel</button><button class="button primary" type="submit">Create ticket</button></div></form></dialog>
+  <dialog id="detail-dialog"><section class="detail-card"><header class="dialog-heading"><div><p class="eyebrow" id="detail-id">TICKET</p><h2 id="detail-title">Ticket</h2></div><button type="button" class="close" data-close="detail-dialog" aria-label="Close">×</button></header><div class="detail-controls"><label>Status<select id="detail-status"><option>Open</option><option>Pending</option><option>Closed</option></select></label><label>Assignee<select id="detail-assignee"><option>Jordan Lee</option><option>Alex Morgan</option><option>Sam Kim</option></select></label></div><div class="requester-card" id="detail-requester"></div><div class="description-block"><h3>Description</h3><p id="detail-description"></p></div><section class="conversation"><h3>Conversation <small id="comment-count"></small></h3><div id="comment-list"></div></section><form id="comment-form" class="reply-form"><label for="comment-input">Add a reply</label><textarea id="comment-input" rows="3" required placeholder="Write a reply..."></textarea><div class="reply-actions"><span>Replies are saved in this browser</span><button class="button primary" type="submit">Send reply</button></div></form></section></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
